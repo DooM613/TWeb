@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Railean Pavel CR-192
         </a>
       </header>
     </div>
