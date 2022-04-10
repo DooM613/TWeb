@@ -4,38 +4,41 @@ import CustomCard from './CustomCard';
 const description = [
     {
         id: 1,
-        title: "Card title 1",
-        description: "description"
+        title: "Titlu 1",
+        description: "Descriere"
     },
+
     {
         id: 2,
-        title: "Card title 2",
-        description: "description"
+        title: "Titlu 2",
+        description: " Descriere"
     },
     {
         id: 3,
-        title: "Card title 3",
-        description: "description"
+        title: "Titlu 3",
+        description: "Descriere"
     },
     {
         id: 4,
-        title: "Card title 4",
-        description: "description"
+        title: "Titlu 4",
+        description: "Descriere"
     },
     {
         id: 5,
-        title: "Card title 5",
-        description: "description"
+        title: "Titlu 5",
+        description: "Descriere"
     },
     {
         id: 6,
-        title: "Card title 6",
-        description: "description"
+        title: "Titlu 6",
+        description: "Descriere"
     },
 ]
 
 
 function Mycontent() {
+
+
     return (
 
         <Row gutter={16} >
