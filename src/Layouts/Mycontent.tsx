@@ -1,56 +1,29 @@
-import { Row } from 'antd';
-import CustomCard from './CustomCard';
-//MyContent
-const description = [
-    {
-        id: 1,
-        title: "Titlu 1",
-        description: "Descriere"
-    },
-
-    {
-        id: 2,
-        title: "Titlu 2",
-        description: " Descriere"
-    },
-    {
-        id: 3,
-        title: "Titlu 3",
-        description: "Descriere"
-    },
-    {
-        id: 4,
-        title: "Titlu 4",
-        description: "Descriere"
-    },
-    {
-        id: 5,
-        title: "Titlu 5",
-        description: "Descriere"
-    },
-    {
-        id: 6,
-        title: "Titlu 6",
-        description: "Descriere"
-    },
-]
+import {Breadcrumb, Row} from 'antd';
+import {CustomCard} from './CustomCard';
+import {Content} from "antd/es/layout/layout";
+import {useRootStore} from "../index";
+import {IContentModel} from "../interface/Interfaces";
 
 
-function Mycontent() {
 
-
+export  const  Mycontent = () => {
+    const {contents} = useRootStore()
+    console.log(">>root_store",contents)
     return (
 
-        <Row gutter={16} >
-            {
-                description.map((element, i) => {
+        <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
+            <Row gutter={16} >
+                {contents.map((content:IContentModel) => {
                     return (
-                        <CustomCard key={element.id} title={element.title} description={element.description}/>
+                        <CustomCard key={content.id} content={content}/>
                     )
-                })
-            }
-        </Row>
+                } )}
+
+            </Row>
+
+        </div>
+
+
+
     )
 }
-
-export default Mycontent
